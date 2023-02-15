@@ -53,9 +53,9 @@
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     <form action="welcome" method="POST">
                                         @csrf
-                                        <button type="button" class="btn btn-secondary" onclick="location.href='admin/login'">Iniciar Sesion como Super Usuario</button> <br> <br>
-                                        <button type="button" class="btn btn-secondary" onclick="location.href='register'">Iniciar Sesion como Auxiliar</button> <br> <br>
-                                        <button type="button" class="btn btn-secondary" onclick="location.href='register'">Iniciar Sesion como Cliente</button>
+                                        <button type="button" class="btn btn-secondary" onclick="location.href='loginA'">Iniciar Sesion como Super Usuario</button> <br> <br>
+                                        <button type="button" class="btn btn-secondary" onclick="location.href='#'">Iniciar Sesion como Auxiliar</button> <br> <br>
+                                        <button type="button" class="btn btn-secondary" onclick="location.href='#'">Iniciar Sesion como Cliente</button>
                                       </form>
                                 </div>
                             </div>
