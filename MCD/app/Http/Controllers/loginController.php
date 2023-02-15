@@ -12,7 +12,7 @@ class loginController extends Controller
         if (Auth::check()) {
             redirect('/Principal');
         }
-        return view('Welcome');
+        return view('principalA');
     }
 
     public function login(loginRequest $request){
