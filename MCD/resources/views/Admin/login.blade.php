@@ -69,6 +69,7 @@
                                         <button type="submit" class="btn btn-secondary">Entrar</button>
                                         <button type="button" class="btn btn-secondary" onclick="location.href='register'">Registrate</button>
                                       </form>
+                                      
                                 </div>
                             </div>
                         </div>

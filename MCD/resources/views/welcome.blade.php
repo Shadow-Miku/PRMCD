@@ -53,21 +53,9 @@
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     <form action="welcome" method="POST">
                                         @csrf
-                                        <div class="mb-3">
-                                          <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario" value="{{old('username')}}">
-                                          <p class="text-light fst-italic"> {{ $errors->first('username') }} </p>
-                                    
-                                          <br>
-                                        </div>
-
-                                        <div class="mb-3">
-                                          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" value="{{old('password')}}">
-                                          <p class="text-light fst-italic"> {{ $errors->first('password') }} </p>
-                                          <br>
-                                        </div>
-                                        
-                                        <button type="submit" class="btn btn-secondary">Entrar</button>
-                                        <button type="button" class="btn btn-secondary" onclick="location.href='register'">Registrate</button>
+                                        <button type="button" class="btn btn-secondary" onclick="location.href='admin/login'">Iniciar Sesion como Super Usuario</button> <br> <br>
+                                        <button type="button" class="btn btn-secondary" onclick="location.href='register'">Iniciar Sesion como Auxiliar</button> <br> <br>
+                                        <button type="button" class="btn btn-secondary" onclick="location.href='register'">Iniciar Sesion como Cliente</button>
                                       </form>
                                 </div>
                             </div>
