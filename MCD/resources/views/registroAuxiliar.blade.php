@@ -12,7 +12,7 @@
 
     <div class="container mt-5 col-md-6">
 
-        <h1 class="display-2 text-center mb-5"> Auxuilares de soporte </h1>
+        <h1 class="display-2 text-center mb-5"> Auxiliares de soporte </h1>
 
         <div class="card mb-5">
 

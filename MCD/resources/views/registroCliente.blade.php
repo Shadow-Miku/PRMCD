@@ -12,12 +12,12 @@
 
     <div class="container mt-5 col-md-6">
 
-        <h1 class="display-2 text-center mb-5"> Auxuilares de soporte </h1>
+        <h1 class="display-2 text-center mb-5"> Clientes </h1>
 
         <div class="card mb-5">
 
             <div class="card-header fw-bold">
-                Registro de Auxiliares de soporte
+                Registro de Clientes
             </div>
 
             <div class="card-body">

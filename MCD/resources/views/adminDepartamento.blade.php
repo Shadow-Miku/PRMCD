@@ -27,17 +27,17 @@
           ) </script>"!!}        
     @endif
 
-    <h1 class="display-1 mt-4 mb-4 text-center"> Tickets registrados </h1>
+    <h1 class="display-1 mt-4 mb-4 text-center"> Departamentos registrados </h1>
 
       <form action="">
-          <input type="search" placeholder="Buscar un ticket..." name="filtrarC" class="form-control">
+          <input type="search" placeholder="Buscar un departamento..." name="filtrarC" class="form-control">
             <button type="submit" class="btn btn-primary">
-              <i class="bi bi-pen"></i> Buscar ticket </button>
+              <i class="bi bi-pen"></i> Buscar Departamento </button>
       </form>
     
       <div class="container mb-5 mt-5  gap-2">
         <button  class="btn btn-success"  onclick="location.href='#'">
-          <i class="bi bi-plus"></i>  Registrar Ticket
+          <i class="bi bi-plus"></i>  Registrar Departamento
         </button> 
   
           <table class="table table-borderless table-striped table-hover" >

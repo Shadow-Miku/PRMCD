@@ -12,12 +12,12 @@
 
     <div class="container mt-5 col-md-6">
 
-        <h1 class="display-2 text-center mb-5"> Auxuilares de soporte </h1>
+        <h1 class="display-2 text-center mb-5">Departamentos </h1>
 
         <div class="card mb-5">
 
             <div class="card-header fw-bold">
-                Registro de Auxiliares de soporte
+                Registro de Departamentos
             </div>
 
             <div class="card-body">
@@ -36,7 +36,7 @@
 
             <div class="card-footer">
 
-                <button type="submit" class="btn btn-success m-1"> Registrar Auxiliar de soporte </button>
+                <button type="submit" class="btn btn-success m-1"> Registrar Departamento </button>
             
             </form>
 
