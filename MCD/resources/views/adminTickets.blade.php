@@ -55,7 +55,6 @@
                           <th scope="col">Observaciones</th>
                           <th scope="col">Modificar</th>
                           <th scope="col">Eliminar</th>
-                          <th scope="col">Vender</th>
                       </tr>
                     </thead>
 
@@ -72,13 +71,13 @@
                             <td></td>
                             <td></td>          
                             <td><button class="btn btn-warning" onclick="location.href='#'">
-                            <i class="bi bi-pen"></i> Asignar
+                            <i class="bi bi-person-add"></i> Asignar
                             </button></td>
                             <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
-                            <i class="bi bi-trash2"></i>  Comentarios
+                            <i class="bi bi-chat-square-dots"></i>  Comentar
                             </button></td>
                             <td><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
-                            <i class="bi bi-cart-plus"></i>  Observaciones
+                            <i class="bi bi-eye"></i>  Observaciones
                             </button></td>
                       </tr>
                     </tbody> 
