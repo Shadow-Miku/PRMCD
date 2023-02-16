@@ -32,7 +32,7 @@
       <form action="#">
           <input type="search" placeholder="Buscar un comic..." name="filtrarC" class="form-control">
             <button type="submit" class="btn btn-primary">
-              <i class="bi bi-pen"></i> Buscar comic </button>
+              <i class="bi bi-pen"></i> Buscar Auxiliar </button>
       </form>
     
       <div class="container mb-5 mt-5  gap-2">
@@ -53,7 +53,7 @@
             </thead>
 
             <tbody>
-            <!--@foreach($consultaComic as $consulta)-->
+            <!---->
                 <tr>
                     <th scope="row"></th>  
                     <td><button class="btn btn-warning" onclick="location.href='#'">
@@ -64,7 +64,7 @@
                     </button></td>
               </tr>
             </tbody> 
-    @endforeach
+    
           </table>
         </div>
     </div>

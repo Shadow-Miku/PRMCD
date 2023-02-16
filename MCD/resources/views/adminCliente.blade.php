@@ -53,7 +53,7 @@
                     </thead>
 
                     <tbody>
-                    <!--@foreach($consultaComic as $consulta)-->
+                   
                         <tr>
                             <th scope="row"></th>  
                             <td><button class="btn btn-warning" onclick="location.href='#'">
@@ -65,7 +65,7 @@
                       </tr>
                     </tbody> 
 
-    @endforeach
+    
         </table>
         </div>
     </div>
