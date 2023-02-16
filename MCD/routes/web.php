@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes Jefe de soporte
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Aqui se encuentran las rutas del jefe de soporte
+| 
+| 
 |
 */
 
@@ -52,4 +52,61 @@ Route::get('adminTickets', function () {
 Route::get('adminDepartamento', function () {
     return view('adminDepartamento');
 });
+/*
+/--------------------------------------------------
+/Rutas deL CRUD AUXILIAR SOPORTE vista Jefe
+/--------------------------------------------------
+*/
 
+
+/*
+/--------------------------------------------------
+/Rutas deL CRUD CLIENTE vista Jefe
+/--------------------------------------------------
+*/
+
+
+/*
+/--------------------------------------------------
+/Rutas deL CRUD DEPARTAMENTOS vista Jefe
+/--------------------------------------------------
+*/
+
+
+/*
+/--------------------------------------------------
+/Rutas deL CRU TICKETS vista Jefe
+/--------------------------------------------------
+*/
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/*
+|--------------------------------------------------------------------------
+| Web Routes Auxiliar de soporte
+|--------------------------------------------------------------------------
+|
+| Aqui se encuentran las rutas del auxiliar de soporte
+| 
+| 
+|
+*/
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/*
+|--------------------------------------------------------------------------
+| Web Routes Cliente
+|--------------------------------------------------------------------------
+|
+| Aqui se encuentran las rutas del cliente / autor del ticket
+| 
+| 
+|
+*/
