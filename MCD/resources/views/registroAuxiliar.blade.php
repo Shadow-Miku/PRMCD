@@ -28,8 +28,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Nombre y apellidos:</label>
-                        <input type="text" class="form-control" name="tipo" value="{{old('tipo')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('tipo') }} </p>
+                        <input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('nombre') }} </p>
                     </div>
                     
                     <div class="mb-3">
@@ -40,14 +40,14 @@
 
                     <div class="mb-3">
                         <label class="form-label">Usuario:</label>
-                        <input type="text" class="form-control" name="descripcion" value="{{old('descripcion')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('descripcion') }} </p>
+                        <input type="text" class="form-control" name="usuario" value="{{old('usuario')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('usuario') }} </p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Contraseña:</label>
-                        <input type="number" min="0" class="form-control" name="cantidadArticulos" value="{{old('cantidadArticulos')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('cantidadArticulos') }} </p>
+                        <input type="text" class="form-control" name="contrasena" value="{{old('contrasena')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('constrasena') }} </p>
                     </div>
 
             </div>
