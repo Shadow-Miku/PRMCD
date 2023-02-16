@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Articulo registrado',
+            'Cliente registrado',
             'success'
           ) </script>"!!}        
     @endif
@@ -22,7 +22,7 @@
 
             <div class="card-body">
 
-                <form class="m-4" method="#" action="#">
+                <form class="m-4" method="post" action="#">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
 

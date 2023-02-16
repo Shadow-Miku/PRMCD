@@ -5,7 +5,7 @@
     @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Muy bien!',
-            'Articulo registrado',
+            'Auxiliar registrado',
             'success'
           ) </script>"!!}        
     @endif
@@ -22,7 +22,7 @@
 
             <div class="card-body">
 
-                <form class="m-4" method="#" action="#">
+                <form class="m-4" method="post" action="#">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
 
@@ -47,7 +47,7 @@
                     <div class="mb-3">
                         <label class="form-label">Contraseña:</label>
                         <input type="text" class="form-control" name="contrasena" value="{{old('contrasena')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('constrasena') }} </p>
+                        <p class="text-primary fst-italic"> {{ $errors->first('contrasena') }} </p>
                     </div>
 
             </div>

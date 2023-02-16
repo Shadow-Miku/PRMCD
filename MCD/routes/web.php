@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controladorVistas;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,13 @@ Route::get('adminTickets', function () {
 Route::get('adminDepartamento', function () {
     return view('adminDepartamento');
 });
+
+/*Ruta para validador de cliente Super Usuario*/
+
+Route::post('registroCliente', [controladorVistas::class,'procesarregistroCliente'])->name('RegiCliente');
+Route::post('registroAuxiliar', [controladorVistas::class,'procesarregistroAuxiliar'])->name('RegiAuxiliar');
+Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroDepartamento'])->name('RegiDepartamento');
+
 /*
 /--------------------------------------------------
 /Rutas deL CRUD AUXILIAR SOPORTE vista Jefe
@@ -64,7 +72,20 @@ Route::get('adminDepartamento', function () {
 /Rutas deL CRUD CLIENTE vista Jefe
 /--------------------------------------------------
 */
-
+//Create
+//Route::get('adminCliente/create', [cbdClientes::class,'create']) ->name('adminCliente.create');
+//store
+//Route::post('adminCliente', [cbdClientes::class,'store'])->name('adminCliente.store');
+//index
+//Route::get('adminCliente',[cbdClientes::class,'index'])->name('adminCliente.index');
+//Edit
+//Route::get('adminCliente/{id}/edit',[cbdClientes::class,'edit'])->name('adminCliente.edit');
+//Update
+//Route::put('adminCliente/{id}',[cbdClientes::class,'update'])->name('adminCliente.update');
+//show
+//Route::get('adminCliente/{id}/show',[cbdClientes::class,'show'])->name('adminCliente.show');
+//destroy
+//Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCliente.destroy');
 
 /*
 /--------------------------------------------------

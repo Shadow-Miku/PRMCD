@@ -27,7 +27,7 @@ class validadorAuxiliar extends FormRequest
             'nombre'=>'required',
             'correo'=>'required',
             'usuario'=>'required',
-            'contrasena'=>'required',
+            'contrasena'=>'required|min:8',
         ];
     }
 }

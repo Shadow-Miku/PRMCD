@@ -26,7 +26,7 @@ class validadorCliente extends FormRequest
         return [
             'nombre'=>'required',
             'correo'=>'required',
-            'usuario'=>'required',
+            'usuario'=>'required|min:8',
             'contrasena'=>'required',
         ];
     }
