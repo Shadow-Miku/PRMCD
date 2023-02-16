@@ -28,8 +28,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Nombre del departamento:</label>
-                        <input type="text" class="form-control" name="tipo" value="{{old('tipo')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('tipo') }} </p>
+                        <input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('nombre') }} </p>
                     </div>
 
             </div>

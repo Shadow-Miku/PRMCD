@@ -13,7 +13,7 @@ class validadorAuxiliar extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class validadorAuxiliar extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nombre'=>'required',
+            'correo'=>'required',
+            'usuario'=>'required',
+            'contrasena'=>'required',
         ];
     }
 }
