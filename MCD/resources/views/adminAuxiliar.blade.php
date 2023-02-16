@@ -30,7 +30,7 @@
     <h1 class="display-1 mt-4 mb-4 text-center"> Auxiliares registrados </h1>
 
       <form action="#">
-          <input type="search" placeholder="Buscar un comic..." name="filtrarC" class="form-control">
+          <input type="search" placeholder="Buscar un auxiliar..." name="filtrarC" class="form-control">
             <button type="submit" class="btn btn-primary">
               <i class="bi bi-pen"></i> Buscar Auxiliar </button>
       </form>
@@ -56,6 +56,9 @@
             <!---->
                 <tr>
                     <th scope="row"></th>  
+                    <td></td> 
+                    <td></td> 
+                    <td></td> 
                     <td><button class="btn btn-warning" onclick="location.href='#'">
                     <i class="bi bi-pen"></i> Actualizar datos del Auxiliar
                     </button></td>

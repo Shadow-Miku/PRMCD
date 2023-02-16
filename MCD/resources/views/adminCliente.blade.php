@@ -55,6 +55,9 @@
                     <tbody>
                    
                         <tr>
+                            <th scope="row"></th> 
+                            <th scope="row"></th> 
+                            <th scope="row"></th> 
                             <th scope="row"></th>  
                             <td><button class="btn btn-warning" onclick="location.href='#'">
                             <i class="bi bi-pen"></i> Actualizar datos del Cliente
