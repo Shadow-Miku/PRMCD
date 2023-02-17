@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\validadorDepartamento;
+use App\Models\tb_departamentos;
 use Illuminate\Http\Request;
+use DB;
+use Carbon\Carbon;
 
 class cbddepartamentos extends Controller
 {
@@ -11,9 +15,12 @@ class cbddepartamentos extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $filtrar = $request->get('filtrar');
+        $consultaDepa = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrar.'%')->get();
+        $ConsultaD= DB::table('tb_departamentos')->get();
+        return view('adminDepartamento',compact('ConsultaD','filtrar','consultaDepa'));
     }
 
     /**
@@ -23,7 +30,7 @@ class cbddepartamentos extends Controller
      */
     public function create()
     {
-        //
+        return view('registroDepartamento');
     }
 
     /**
@@ -32,9 +39,14 @@ class cbddepartamentos extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(validadorDepartamento $request)
     {
-        //
+        DB::table('tb_departamentos')->insert([
+            "nombre"=> $request->input('nombre'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now()
+        ]);
+        return redirect('departamento')->with('confirmacion','abc');
     }
 
     /**
@@ -45,7 +57,9 @@ class cbddepartamentos extends Controller
      */
     public function show($id)
     {
-        //
+        $consultaId= DB::table('tb_departamentos')->where('idDepartamento',$id)->first();
+
+        return view('modalEliminarDepartamento', compact('consultaId'));
     }
 
     /**
@@ -56,7 +70,8 @@ class cbddepartamentos extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultaId= DB::table('tb_departamentos')->where('idDepartamento',$id)->first();
+        return view('ActualizarDep', compact('consultaId'));
     }
 
     /**
@@ -68,7 +83,12 @@ class cbddepartamentos extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('tb_departamentos')->where('idDepartamento',$id)->update([
+            "nombre"=> $request->input('nombre'),
+            "updated_at"=> Carbon::now()
+        ]);
+
+        return redirect('departamento')->with('actualizar','abc');
     }
 
     /**
@@ -79,6 +99,8 @@ class cbddepartamentos extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tb_departamentos')->where('idDepartamento',$id)->delete();
+
+        return redirect('departamento')->with('elimina','abc');
     }
 }
