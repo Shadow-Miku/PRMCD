@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\cbdAuxiliares;
+use App\Http\Controllers\cbdDepartamentos;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +56,7 @@ Route::get('adminDepartamento', function () {
     return view('adminDepartamento');
 });
 
-/*Ruta para validador de cliente Super Usuario*/
+/*Ruta para validador de cliente vista Jefe*/
 
 Route::post('registroCliente', [controladorVistas::class,'procesarregistroCliente'])->name('RegiCliente');
 Route::post('registroAuxiliar', [controladorVistas::class,'procesarregistroAuxiliar'])->name('RegiAuxiliar');
@@ -106,7 +107,14 @@ Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroD
 /Rutas deL CRUD DEPARTAMENTOS vista Jefe
 /--------------------------------------------------
 */
+  //index
+  Route::get('adminDepartamento',[cbdDepartamentos::class,'index'])->name('adminDepartamento.index');
 
+  //Create
+  Route::get('adminDepartamento/create', [cbdDepartamentos::class,'create'])->name('adminDepartamento.create');
+
+  //store
+  Route::post('adminDepartamento', [cbdDepartamentos::class,'store'])->name('adminDepartamento.store');
 
 /*
 /--------------------------------------------------
