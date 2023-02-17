@@ -55,7 +55,7 @@ Route::get('adminDepartamento', function () {
     return view('adminDepartamento');
 });
 
-/*Ruta para validador de cliente Super Usuario*/
+/*Ruta para validador de cliente vista Jefe*/
 
 Route::post('registroCliente', [controladorVistas::class,'procesarregistroCliente'])->name('RegiCliente');
 Route::post('registroAuxiliar', [controladorVistas::class,'procesarregistroAuxiliar'])->name('RegiAuxiliar');
