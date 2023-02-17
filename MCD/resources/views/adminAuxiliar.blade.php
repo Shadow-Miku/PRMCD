@@ -53,12 +53,13 @@
             </thead>
 
             <tbody>
-            <!---->
+            @foreach ($ConsultaAux as $consulta)
                 <tr>
-                    <th scope="row"></th>  
-                    <td></td> 
-                    <td></td> 
-                    <td></td> 
+                    <th scope="row">{{$consulta->idaux}}</th>  
+                    <td>{{$consulta->nameA}}</td> 
+                    <td>{{$consulta->emailA}}</td> 
+                    <td>{{$consulta->usernameA}}</td>
+                    <td>{{$consulta->password}}</td> 
                     <td><button class="btn btn-warning" onclick="location.href='#'">
                     <i class="bi bi-pen"></i> Actualizar datos del Auxiliar
                     </button></td>
@@ -67,7 +68,7 @@
                     </button></td>
               </tr>
             </tbody> 
-    
+            @endforeach
           </table>
         </div>
     </div>
