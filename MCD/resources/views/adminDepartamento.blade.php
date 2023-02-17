@@ -6,7 +6,7 @@
 @if (session()->has('actualizar'))
         {!!" <script> Swal.fire(
             'Siuuuuuuuu!',
-            'Comic fresquisimo!',
+            'Departamento fresco!',
             'success'
           ) </script>"!!}        
 @endif
@@ -14,7 +14,7 @@
 @if (session()->has('elimina'))
         {!!" <script> Swal.fire(
             'F',
-            'El comic ya no anda fresh',
+            'El departamento murio,
             'success'
           ) </script>"!!}        
 @endif
@@ -22,21 +22,21 @@
 @if (session()->has('confirmacion'))
         {!!" <script> Swal.fire(
             'Siuuuuuuuu!',
-            'Comic fresquisimo!',
+            'Departamento registrado',
             'success'
           ) </script>"!!}        
     @endif
 
     <h1 class="display-1 mt-4 mb-4 text-center"> Departamentos registrados </h1>
 
-      <form action="">
-          <input type="search" placeholder="Buscar un departamento..." name="filtrarC" class="form-control">
-            <button type="submit" class="btn btn-primary">
-              <i class="bi bi-pen"></i> Buscar Departamento </button>
-      </form>
+    <form action="{{route('adminDepartamento.index')}}">
+      <input type="search" placeholder="Buscar un departamento..." name="filtrarD" class="form-control">
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-pen"></i> Buscar comic </button>
+    </form>
     
       <div class="container mb-5 mt-5  gap-2">
-        <button  class="btn btn-success"  onclick="location.href='#'">
+        <button  class="btn btn-success"  onclick="location.href='{{route('adminDepartamento.create')}}'">
           <i class="bi bi-plus"></i>  Registrar Departamento
         </button> 
   
@@ -51,10 +51,10 @@
                     </thead>
 
                     <tbody>
-                   
+                      @foreach ($ConsultaD as $consulta)
                         <tr>
-                            <th scope="row"></th>
-                            <td></td>          
+                            <th scope="row">{{$consulta->idDepartamento}}</th>  
+                            <td>{{$consulta->nombre}}</td>         
                             <td><button class="btn btn-warning" onclick="location.href='#'">
                             <i class="bi bi-pen"></i> Actualizar
                             </button></td>
@@ -63,7 +63,7 @@
                             </button></td>
                       </tr>
                     </tbody> 
-    
+                  @endforeach
     
         </table>
         </div>
