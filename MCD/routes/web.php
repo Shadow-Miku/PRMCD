@@ -67,12 +67,19 @@ Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroD
 /--------------------------------------------------
 */
     //index
-    Route::get('adminAuxiliar',[cbdAuxiliares::class,'index'])->name('cbdAuxiliares.index');
+    Route::get('adminAuxiliar',[cbdAuxiliares::class,'index'])->name('adminAuxiliar.index');
     //Create
     Route::get('adminAuxiliar/create', [cbdAuxiliares::class,'create'])->name('adminAuxiliar.create');
-
     //store
     Route::post('adminAuxiliar', [cbdAuxiliares::class,'store'])->name('adminAuxiliar.store');
+    //Edit
+    Route::get('adminAuxiliar/{id}/edit',[cbdAuxiliares::class,'edit'])->name('adminAuxiliar.edit');
+    //Update
+    Route::put('adminAuxiliar/{id}',[cbdAuxiliares::class,'update'])->name('adminAuxiliar.update');
+    //show
+    Route::get('adminAuxiliar/{id}/show',[cbdAuxiliares::class,'show'])->name('adminAuxiliar.show');
+    //destroy
+    Route::delete('adminAuxiliar/{id}',[cbdAuxiliares::class,'destroy'])->name('adminAuxiliar.destroy');
 
 /*
 /--------------------------------------------------

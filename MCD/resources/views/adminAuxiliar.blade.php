@@ -6,7 +6,7 @@
 @if (session()->has('actualizar'))
         {!!" <script> Swal.fire(
             'Siuuuuuuuu!',
-            'Auxiliar actualizado',
+            'Datos del auxiliar actualizado',
             'success'
           ) </script>"!!}        
 @endif
@@ -14,7 +14,7 @@
 @if (session()->has('elimina'))
         {!!" <script> Swal.fire(
             'F',
-            'Auxiliar eliminado',
+            'Datos del auxiliar eliminados',
             'success'
           ) </script>"!!}        
 @endif
@@ -60,10 +60,12 @@
                     <td>{{$consulta->emailA}}</td> 
                     <td>{{$consulta->usernameA}}</td>
                     <td>{{$consulta->password}}</td> 
-                    <td><button class="btn btn-warning" onclick="location.href='#'">
+                    <td>
+                      <button class="btn btn-warning" onclick="location.href='{{route('adminAuxiliar.edit', $consulta->idaux)}}'">
                     <i class="bi bi-pen"></i> Actualizar datos del Auxiliar
                     </button></td>
-                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="">
+                    <td>
+                    <button type="button" class="btn btn-danger" onclick="location.href='{{route('adminAuxiliar.show', $consulta->idaux)}}'">
                     <i class="bi bi-trash2"></i>  Dar de baja al Auxiliar
                     </button></td>
               </tr>
