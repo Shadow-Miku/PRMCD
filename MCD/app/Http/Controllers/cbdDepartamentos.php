@@ -16,10 +16,12 @@ class cbddepartamentos extends Controller
      */
     public function index(Request $request)
     {
+      
         $filtrarD = $request->get('filtrarD');
         $consultaDep = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrarD.'%')->get();
         $ConsultaD= DB::table('tb_departamentos')->get();
         return view('adminDepartamento',compact('ConsultaD','filtrarD','consultaDep'));
+
     }
 
     /**
@@ -45,7 +47,7 @@ class cbddepartamentos extends Controller
             "created_at"=> Carbon::now(),
             "updated_at"=> Carbon::now()
         ]);
-        return redirect('departamento')->with('confirmacion','abc');
+        return redirect('adminDepartamento')->with('confirmacion','abc');
     }
 
     /**
