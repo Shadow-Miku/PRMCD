@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\validadorDepartamento;
-use App\Models\tb_departamentos;
 use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
@@ -17,10 +16,10 @@ class cbddepartamentos extends Controller
      */
     public function index(Request $request)
     {
-        $filtrar = $request->get('filtrar');
-        $consultaDepa = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrar.'%')->get();
+        $filtrarD = $request->get('filtrarD');
+        $consultaDep = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrarD.'%')->get();
         $ConsultaD= DB::table('tb_departamentos')->get();
-        return view('adminDepartamento',compact('ConsultaD','filtrar','consultaDepa'));
+        return view('adminDepartamento',compact('ConsultaD','filtrarD','consultaDep'));
     }
 
     /**
@@ -81,8 +80,9 @@ class cbddepartamentos extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validadorDepartamento $request, $id)
     {
+        
         DB::table('tb_departamentos')->where('idDepartamento',$id)->update([
             "nombre"=> $request->input('nombre'),
             "updated_at"=> Carbon::now()

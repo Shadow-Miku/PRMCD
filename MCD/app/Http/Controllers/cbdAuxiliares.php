@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Requests\validadorAuxiliar;
+use DB;
+use Carbon\Carbon;
 
 class cbdauxiliares extends Controller
 {
@@ -14,7 +16,8 @@ class cbdauxiliares extends Controller
      */
     public function index()
     {
-        //
+        $ConsultaAux= DB::table('tb_auxiliar')->get();
+        return view('adminAuxiliar',compact('ConsultaAux'));
     }
 
     /**
@@ -24,7 +27,7 @@ class cbdauxiliares extends Controller
      */
     public function create()
     {
-        //
+        return view('registroAuxiliar');
     }
 
     /**
@@ -33,9 +36,17 @@ class cbdauxiliares extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(validadorAuxiliar $request)
     {
-        //
+        DB::table('tb_auxiliar')->insert([
+            "nameA"=> $request->input('nombre'),
+            "emailA"=> $request->input('correo'),
+            "usernameA"=> $request->input('usuario'),
+            "password"=> $request->input('contrasena'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now()
+        ]);
+        return redirect('adminAuxiliar/create')->with('confirmacion','abc');
     }
 
     /**
@@ -46,7 +57,8 @@ class cbdauxiliares extends Controller
      */
     public function show($id)
     {
-        //
+        //$consultaId= DB::table('tb_auxiliar')->where('idaux',$id)->first();
+        //return view('Eliminar', compact('consultaId'));
     }
 
     /**

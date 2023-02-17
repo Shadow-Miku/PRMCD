@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
+use App\Http\Controllers\cbdAuxiliares;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +66,13 @@ Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroD
 /Rutas deL CRUD AUXILIAR SOPORTE vista Jefe
 /--------------------------------------------------
 */
+    //index
+    Route::get('adminAuxiliar',[cbdAuxiliares::class,'index'])->name('cbdAuxiliares.index');
+    //Create
+    Route::get('adminAuxiliar/create', [cbdAuxiliares::class,'create'])->name('adminAuxiliar.create');
 
+    //store
+    Route::post('adminAuxiliar', [cbdAuxiliares::class,'store'])->name('adminAuxiliar.store');
 
 /*
 /--------------------------------------------------

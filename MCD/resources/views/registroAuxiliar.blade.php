@@ -22,7 +22,7 @@
 
             <div class="card-body">
 
-                <form class="m-4" method="post" action="#">
+                <form class="m-4" method="post" action="{{route('adminAuxiliar.store')}}">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
 
