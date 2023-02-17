@@ -35,10 +35,10 @@
               <i class="bi bi-pen"></i> Buscar ticket </button>
       </form>
     
-      <div class="container mb-5 mt-5  gap-2">
+      <!--<div class="container mb-5 mt-5  gap-2">
         <button  class="btn btn-success"  onclick="location.href='#'">
           <i class="bi bi-plus"></i>  Registrar Ticket
-        </button> 
+        </button> -->
   
           <table class="table table-borderless table-striped table-hover" >
                   <thead>
