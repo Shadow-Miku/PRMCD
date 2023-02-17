@@ -57,8 +57,8 @@ class cbdauxiliares extends Controller
      */
     public function show($id)
     {
-        //$consultaId= DB::table('tb_auxiliar')->where('idaux',$id)->first();
-        //return view('Eliminar', compact('consultaId'));
+        $consultaId= DB::table('tb_auxiliar')->where('idaux',$id)->first();
+        return view('eliAux', compact('consultaId'));
     }
 
     /**
@@ -69,7 +69,9 @@ class cbdauxiliares extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultaId= DB::table('tb_auxiliar')->where('idaux',$id)->first();
+
+        return view('actAuxiliar', compact('consultaId'));
     }
 
     /**
@@ -79,9 +81,17 @@ class cbdauxiliares extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validadorAuxiliar $request, $id)
     {
-        //
+            DB::table('tb_auxiliar')->where('idaux', $id)->update([
+            "nameA"=> $request->input('nombre'),
+            "emailA"=> $request->input('correo'),
+            "usernameA"=> $request->input('usuario'),
+            "password"=> $request->input('contrasena'),
+            "updated_at"=> Carbon::now()
+        ]);
+
+        return redirect('adminAuxiliar')->with('actualizar','abc');
     }
 
     /**
@@ -92,6 +102,7 @@ class cbdauxiliares extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tb_auxiliar')->where('idaux', $id)->delete();
+        return redirect('adminAuxiliar')->with('eliminado','abc');
     }
 }
