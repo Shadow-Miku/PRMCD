@@ -46,7 +46,7 @@ class cbdauxiliares extends Controller
             "created_at"=> Carbon::now(),
             "updated_at"=> Carbon::now()
         ]);
-        return redirect('adminAuxiliar/create')->with('confirmacion','abc');
+        return redirect('adminAuxiliar')->with('confirmacion','abc');
     }
 
     /**

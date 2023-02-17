@@ -36,7 +36,7 @@
       </form>
     
       <div class="container mb-5 mt-5  gap-2">
-        <button  class="btn btn-success"  onclick="location.href='#'">
+        <button  class="btn btn-success"  onclick="location.href='{{route('adminAuxiliar.create')}}'">
           <i class="bi bi-plus"></i>  Registrar otro auxiliar
         </button> 
   
