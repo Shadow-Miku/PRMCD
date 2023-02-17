@@ -64,6 +64,5 @@ class controladorVistas extends Controller
     public function procesarregistroDepartamento(validadorDepartamento $req){
         return redirect('registroDepartamento')->with('confirmacion','Registro de Departamento exitoso.');
     }
-
 }
 
