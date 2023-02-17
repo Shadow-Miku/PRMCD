@@ -57,7 +57,7 @@ class controladorVistas extends Controller
         return redirect('registroCliente')->with('confirmacion','Registro de Cliente exitoso.');
     }
 
-    public function procesarregistroAuxiliar(validadorCliente $req){
+    public function procesarregistroAuxiliar(validadorAuxiliar $req){
         return redirect('registroAuxiliar')->with('confirmacion','Registro de Auxiliar exitoso.');
     }
 

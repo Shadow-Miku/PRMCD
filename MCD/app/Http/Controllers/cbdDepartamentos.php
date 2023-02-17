@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\validadorDepartamento;
 use Illuminate\Http\Request;
+use DB;
+use Carbon\Carbon;
 
 class cbddepartamentos extends Controller
 {
@@ -11,9 +14,12 @@ class cbddepartamentos extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $filtrarD = $request->get('filtrarD');
+        $consultaDep = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrarD.'%')->get();
+        $ConsultaD= DB::table('tb_departamentos')->get();
+        return view('adminDepartamento',compact('ConsultaD','filtrarD','consultaDep'));
     }
 
     /**
@@ -23,7 +29,7 @@ class cbddepartamentos extends Controller
      */
     public function create()
     {
-        //
+        return view('registroDepartamento');
     }
 
     /**
@@ -32,9 +38,14 @@ class cbddepartamentos extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(validadorDepartamento $request)
     {
-        //
+        DB::table('tb_departamentos')->insert([
+            "nombre"=> $request->input('nombre'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now()
+        ]);
+        return redirect('registroDepartamento')->with('confirmacion','abc');
     }
 
     /**
@@ -45,7 +56,9 @@ class cbddepartamentos extends Controller
      */
     public function show($id)
     {
-        //
+        $consultaId= DB::table('tb_departamentos')->where('idDepartamento',$id)->first();
+
+        return view('modalEliminarDepartamento', compact('consultaId'));
     }
 
     /**
@@ -56,7 +69,9 @@ class cbddepartamentos extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultaId= DB::table('tb_departamentos')->where('idDepartamento',$id)->first();
+
+        return view('ActualizarProveedo', compact('consultaId'));
     }
 
     /**
@@ -66,9 +81,15 @@ class cbddepartamentos extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validadorDepartamento $request, $id)
     {
-        //
+        
+        DB::table('tb_departamentos')->where('idDepartamento',$id)->update([
+            "nombre"=> $request->input('nombre'),
+            "updated_at"=> Carbon::now()
+        ]);
+        
+        return redirect('adminDepartamento')->with('actualizar','abc');
     }
 
     /**
@@ -79,6 +100,8 @@ class cbddepartamentos extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tb_departamentos')->where('idDepartamento',$id)->delete();
+
+        return redirect('adminDepartamento')->with('elimina','abc');
     }
 }
