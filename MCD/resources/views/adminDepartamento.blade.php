@@ -30,9 +30,9 @@
     <h1 class="display-1 mt-4 mb-4 text-center"> Departamentos registrados </h1>
 
     <form action="{{route('adminDepartamento.index')}}">
-      <input type="search" placeholder="Buscar un departamento..." name="filtrarD" class="form-control">
+      <input type="search" placeholder="Buscar un departamento..." name="filtrar" class="form-control">
         <button type="submit" class="btn btn-primary">
-          <i class="bi bi-pen"></i> Buscar comic </button>
+          <i class="bi bi-pen"></i> Buscar departamento </button>
     </form>
     
       <div class="container mb-5 mt-5  gap-2">
@@ -55,10 +55,10 @@
                         <tr>
                             <th scope="row">{{$consulta->idDepartamento}}</th>  
                             <td>{{$consulta->nombre}}</td>         
-                            <td><button class="btn btn-warning" onclick="location.href='#'">
+                            <td><button class="btn btn-warning" onclick="location.href='{{route('adminDepartamento.edit', $consulta->idDepartamento)}}'">
                             <i class="bi bi-pen"></i> Actualizar
                             </button></td>
-                            <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
+                            <td><button  class="btn btn-danger"  onclick="location.href='{{route('adminDepartamento.show', $consulta->idDepartamento)}}'">
                             <i class="bi bi-trash2"></i>  Eliminar
                             </button></td>
                       </tr>
