@@ -36,7 +36,7 @@
       </form>
     
       <div class="container mb-5 mt-5  gap-2">
-        <button  class="btn btn-success"  onclick="location.href='#'">
+        <button  class="btn btn-success"  onclick="location.href='{{route('adminCliente.create')}}'">
           <i class="bi bi-plus"></i>  Registrar otro cliente
         </button> 
   
@@ -53,23 +53,23 @@
                     </thead>
 
                     <tbody>
-                   
+                    @foreach ($ConsultaCli as $consulta)
                         <tr>
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th> 
-                            <th scope="row"></th>  
-                            <td><button class="btn btn-warning" onclick="location.href='#'">
+                        <th scope="row">{{$consulta->idcli}}</th>  
+                        <td>{{$consulta->nameC}}</td> 
+                        <td>{{$consulta->emailC}}</td> 
+                        <td>{{$consulta->usernameC}}</td>
+                        <td>{{$consulta->password}}</td>  
+                            <td><button class="btn btn-warning" onclick="location.href='{{route('adminCliente.edit', $consulta->idcli)}}'">
                             <i class="bi bi-pen"></i> Actualizar datos del Cliente
                             </button></td>
-                            <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="">
+                            <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" onclick="location.href='{{route('adminCliente.show', $consulta->idcli)}}'">
                             <i class="bi bi-trash2"></i>  Dar de baja al Cliente
                             </button></td>
                       </tr>
                     </tbody> 
-
-    
-        </table>
+                    @endforeach
+          </table>
         </div>
     </div>
     

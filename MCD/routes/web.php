@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\cbdAuxiliares;
 use App\Http\Controllers\cbdDepartamentos;
+use App\Http\Controllers\cbdClientes;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,19 +89,19 @@ Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroD
 /--------------------------------------------------
 */
 //Create
-//Route::get('adminCliente/create', [cbdClientes::class,'create']) ->name('adminCliente.create');
+Route::get('adminCliente/create', [cbdClientes::class,'create']) ->name('adminCliente.create');
 //store
-//Route::post('adminCliente', [cbdClientes::class,'store'])->name('adminCliente.store');
+Route::post('adminCliente', [cbdClientes::class,'store'])->name('adminCliente.store');
 //index
-//Route::get('adminCliente',[cbdClientes::class,'index'])->name('adminCliente.index');
+Route::get('adminCliente',[cbdClientes::class,'index'])->name('adminCliente.index');
 //Edit
-//Route::get('adminCliente/{id}/edit',[cbdClientes::class,'edit'])->name('adminCliente.edit');
+Route::get('adminCliente/{id}/edit',[cbdClientes::class,'edit'])->name('adminCliente.edit');
 //Update
-//Route::put('adminCliente/{id}',[cbdClientes::class,'update'])->name('adminCliente.update');
+Route::put('adminCliente/{id}',[cbdClientes::class,'update'])->name('adminCliente.update');
 //show
-//Route::get('adminCliente/{id}/show',[cbdClientes::class,'show'])->name('adminCliente.show');
+Route::get('adminCliente/{id}/show',[cbdClientes::class,'show'])->name('adminCliente.show');
 //destroy
-//Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCliente.destroy');
+Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCliente.destroy');
 
 /*
 /--------------------------------------------------
