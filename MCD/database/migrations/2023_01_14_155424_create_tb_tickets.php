@@ -17,7 +17,6 @@ return new class extends Migration
             $table->bigIncrements('idTicket');
 		    $table->unsignedBigInteger('autor');
 		    $table->unsignedBigInteger('departamento');
-            $table->date('fechaLevantamiento');
 		    $table->string('clasificacion');
             $table->unsignedBigInteger('encargado');
 		    $table->string('estatus');

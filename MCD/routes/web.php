@@ -41,6 +41,10 @@ Route::get('registroDepartamento', function () {
     return view('registroDepartamento');
 });
 
+Route::get('levantarTicket', function () {
+    return view('levantarTicket');
+});
+
 Route::get('adminAuxiliar', function () {
     return view('adminAuxiliar');
 });
@@ -62,6 +66,7 @@ Route::get('adminDepartamento', function () {
 Route::post('registroCliente', [controladorVistas::class,'procesarregistroCliente'])->name('RegiCliente');
 Route::post('registroAuxiliar', [controladorVistas::class,'procesarregistroAuxiliar'])->name('RegiAuxiliar');
 Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroDepartamento'])->name('RegiDepartamento');
+Route::post('registroTicket', [controladorVistas::class,'procesarlevantarticket'])->name('RegiTicket');
 
 /*
 /--------------------------------------------------
@@ -131,7 +136,7 @@ Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCl
 
 /*
 /--------------------------------------------------
-/Rutas deL CRU TICKETS vista Jefe
+/Rutas deL RU TICKETS vista Jefe
 /--------------------------------------------------
 */
 
@@ -166,3 +171,4 @@ Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCl
 | 
 |
 */
+

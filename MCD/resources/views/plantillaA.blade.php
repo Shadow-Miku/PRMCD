@@ -33,7 +33,7 @@
                           <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Menu</span>
                       </a>
                   </li>
-                  <!--enlace submenu de comic y articulos-->
+                  <!--enlace submenu de registrar-->
                   <li>
                       <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                           <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Registrar</span> </a>
@@ -77,21 +77,38 @@
                   </li>
               </ul>
               <hr>
-              <!--<div class="dropdown pb-4">
+
+              <!--enlace testeo tickets-->
+              <li>
+                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                    <i class="bi bi-fullscreen"></i> <span class="ms-1 d-none d-sm-inline">Testeo tickets</span> </a>
+                    <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+
+                    <li>
+                      <a href="levantarTicket" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Ticket</span> </a>
+                    </li>
+
+                    <li class="w-100">
+                      <a href="adminDepartamento" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Vista ticket auxiliar</span> </a>
+                    </li>
+
+                </ul>
+            </li>
+              <div class="dropdown pb-4">
                   <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                      <span class="d-none d-sm-inline mx-1">loser</span>
+                      <img src="https://avatars.githubusercontent.com/u/108553512?v=4" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                      <span class="d-none d-sm-inline mx-1">Aldo</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                      <li><a class="dropdown-item" href="#">New project...</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <!--<li><a class="dropdown-item" href="#">New project...</a></li>-->
+                      <!--<li><a class="dropdown-item" href="#">Settings</a></li>-->
+                      <li><a class="dropdown-item" href="">Perfil</a></li>
                       <li>
                           <hr class="dropdown-divider">
                       </li>
-                      <li><a class="dropdown-item" href="#">Sign out</a></li>
+                      <li><a class="dropdown-item" href="/">Salir</a></li>
                   </ul>
-              </div>-->
+              </div>
           </div>
       </div>
       <div class="col py-3">

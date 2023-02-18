@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// Validadores de Jefe de Soporte
 use App\Http\Requests\validadorCliente;
 use App\Http\Requests\validadorAuxiliar;
 use App\Http\Requests\validadorDepartamento;
@@ -35,6 +34,10 @@ class controladorVistas extends Controller
     public function showregistroDepartamento(){
         return view('registroDepartamento');
     }
+
+    public function showlevantarTicket(){
+        return view('levantarTicket');
+    }
     
     public function showadminAuxiliar(){
         return view('adminAuxiliar');
@@ -63,6 +66,10 @@ class controladorVistas extends Controller
 
     public function procesarregistroDepartamento(validadorDepartamento $req){
         return redirect('registroDepartamento')->with('confirmacion','Registro de Departamento exitoso.');
+    }
+
+    public function procesarlevantarTicket(validadorTicket $req){
+        return redirect('registroTicket')->with('confirmacion','Registro de Ticket exitoso.');
     }
 }
 

@@ -25,9 +25,9 @@ class validadorTicket extends FormRequest
     {
         return [
             'nombre'=>'required',
-            'correo'=>'required',
-            'usuario'=>'required',
-            'contrasena'=>'required'
+            'departamento'=>'required',
+            'clasificacion'=>'required',
+            'comentariocliente'=>'required'
         ];
     }
 }

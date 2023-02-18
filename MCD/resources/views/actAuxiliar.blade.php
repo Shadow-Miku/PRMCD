@@ -40,19 +40,19 @@
                     
                     <div class="mb-3">
                         <label class="form-label">Correo Electronico:</label>
-                        <input type="email" class="form-control"  name="correo" value="{{$consultaId->emailA}}'">
+                        <input type="email" class="form-control"  name="correo" value="{{$consultaId->emailA}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('correo') }} </p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Usuario:</label>
-                        <input type="text" class="form-control" name="usuario" value="{{$consultaId->usernameA}}'">
+                        <input type="text" class="form-control" name="usuario" value="{{$consultaId->usernameA}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('usuario') }} </p>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Contraseña:</label>
-                        <input type="text" class="form-control" name="contrasena" value="{{$consultaId->password}}'">
+                        <input type="text" class="form-control" name="contrasena" value="{{$consultaId->password}}">
                         <p class="text-primary fst-italic"> {{ $errors->first('contrasena') }} </p>
                     </div>
 

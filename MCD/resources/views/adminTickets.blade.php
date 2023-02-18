@@ -76,15 +76,17 @@
                             <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
                             <i class="bi bi-chat-square-dots"></i>  Comentar
                             </button></td>
-                            <td><button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
-                            <i class="bi bi-eye"></i>  Observaciones
-                            </button></td>
+                            <td></td>
                       </tr>
                     </tbody> 
     
     
         </table>
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
+          <i class="bi bi-file-pdf"></i>  Generar Reporte
+        </button>
         </div>
+        
     </div>
     
 @stop

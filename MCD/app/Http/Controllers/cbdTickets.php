@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\validadorTicket;
 use Illuminate\Http\Request;
+use DB;
+use Carbon\Carbon;
+use App\Models\tb_departamentos;
+use App\Models\tb_cliente;
 
 class cbdtickets extends Controller
 {
@@ -11,9 +16,13 @@ class cbdtickets extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $filtrar = $request->get('filtrar');
+        $consultaTicket = DB::table('tb_tickets')->where('nombre','like','%'.$filtrar.'%')->get();
+        $ConsultaT= DB::table('tb_tickets')->get();
+        return view('',compact('ConsultaC','filtrar','consultaComic'));
+
     }
 
     /**
