@@ -17,10 +17,10 @@ class cbddepartamentos extends Controller
     public function index(Request $request)
     {
       
-        $filtrarD = $request->get('filtrarD');
-        $consultaDep = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrarD.'%')->get();
+        $filtrar = $request->get('filtrar');
+        $consultaDep = DB::table('tb_departamentos')->where('nombre','like','%'.$filtrar.'%')->get();
         $ConsultaD= DB::table('tb_departamentos')->get();
-        return view('adminDepartamento',compact('ConsultaD','filtrarD','consultaDep'));
+        return view('adminDepartamento',compact('ConsultaD','filtrar','consultaDep'));
 
     }
 
@@ -60,7 +60,7 @@ class cbddepartamentos extends Controller
     {
         $consultaId= DB::table('tb_departamentos')->where('idDepartamento',$id)->first();
 
-        return view('modalEliminarDepartamento', compact('consultaId'));
+        return view('eliDep', compact('consultaId'));
     }
 
     /**
@@ -72,7 +72,7 @@ class cbddepartamentos extends Controller
     public function edit($id)
     {
         $consultaId= DB::table('tb_departamentos')->where('idDepartamento',$id)->first();
-        return view('ActualizarDep', compact('consultaId'));
+        return view('actDep', compact('consultaId'));
     }
 
     /**
@@ -90,7 +90,7 @@ class cbddepartamentos extends Controller
             "updated_at"=> Carbon::now()
         ]);
 
-        return redirect('departamento')->with('actualizar','abc');
+        return redirect('adminDepartamento')->with('actualizar','abc');
     }
 
     /**
@@ -103,6 +103,6 @@ class cbddepartamentos extends Controller
     {
         DB::table('tb_departamentos')->where('idDepartamento',$id)->delete();
 
-        return redirect('departamento')->with('elimina','abc');
+        return redirect('adminDepartamento')->with('elimina','abc');
     }
 }

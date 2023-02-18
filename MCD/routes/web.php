@@ -116,6 +116,18 @@ Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroD
   //store
   Route::post('adminDepartamento', [cbdDepartamentos::class,'store'])->name('adminDepartamento.store');
 
+  //Edit
+  Route::get('adminDepartamento/{id}/edit',[cbdDepartamentos::class,'edit'])->name('adminDepartamento.edit');
+
+  //Update
+  Route::put('adminDepartamento/{id}',[cbdDepartamentos::class,'update'])->name('adminDepartamento.update');
+
+  //show
+  Route::get('adminDepartamento/{id}/show',[cbdDepartamentos::class,'show'])->name('adminDepartamento.show');
+  
+  //destroy
+  Route::delete('adminDepartamento/{id}',[cbdDepartamentos::class,'destroy'])->name('adminDepartamento.destroy');
+
 /*
 /--------------------------------------------------
 /Rutas deL CRU TICKETS vista Jefe
