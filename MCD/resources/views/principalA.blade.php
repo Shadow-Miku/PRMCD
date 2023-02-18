@@ -26,8 +26,9 @@
                     Ganador del concurso de comics UNICEF
                   </h2>
                   <p class="article-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros.
+                  Después de buscar a lo largo y ancho del planeta, hemos elegido a la superheroína que lucha para eliminar la violencia en la escuela: ¡Cipta!
+                  Cipta, Rajwa para sus compañeros, es una niña de 15 años que es capaz de convertir sus dibujos en objetos de la vida real y utilizarlos para detener la violencia en las escuelas.  
+                  En cuanto entra a una escuela en la que abunda el acoso, Rajwa descubre a dos niñas acorralando a otra niña en un salón de clase vacío. Parece que después de haberla humillado durante todo el verano por internet, estas acosadoras están dispuestas a dar un paso más. Sin duda, esta es una tarea para Cipta, pero primero tendrá que enfrentarse a un dragón de tres cabezas, a un ogro y a un monstruo de piedra. ¿Existe algún poder más perverso detrás de todo esto? Cipta, cuyos poderes solo están limitados por su imaginación, debe usar todo su ingenio y empatía para derrotar a la fuerza invisible responsable y restablecer la paz.
                   </p>
                   <footer class="article-info">
                     <span>Por John Blaskowithz</span>
@@ -47,8 +48,10 @@
                         Especiales del mundo de anime
                       </h2>
                       <p class="article-content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                      El día de hoy se dieron a conocer los ganadores del gran premio ‘Next Manga Awards 2021’, 
+                      entregado por Da Vinci y el conocido portal Nico Nico. Este año la lista de nominados contaba con varios 
+                      nombres de mangas importantes tanto en la categoría web como en la impresa,
+                      siendo el mas destacados el reciente éxito de la editorial Shueisha, Kaijuu No. 8.
                       </p>
                       <footer class="article-info">
                         <span>By Aldo Rojas</span>
@@ -118,9 +121,10 @@
                     La masa negativa
                   </h2>
                   <p class="article-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Físicos de la Universidad Estatal de Washington han creado un fluido con masa negativa, 
+                  que es exactamente lo que su naturaleza indica: si lo empujas, 
+                  no se acelera en la dirección en la que fue empujado, 
+                  se acelera hacia atrás, a diferencia de todos los objetos físicos del mundo que conocemos.
                   </p>
                   <footer class="article-info">
                     <span>By Unko Nami</span>
