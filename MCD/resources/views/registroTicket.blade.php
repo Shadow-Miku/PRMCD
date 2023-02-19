@@ -31,8 +31,8 @@
                         <select class="form-select" name="nombre" aria-label="Default select example">
                             <option disabled selected >Seleccione la opcion con su nombre</option>
                        
-                            @foreach ($clientes as $tb_cliente)
-                                <option value="{{$tb_cliente['idcli']}}">{{$tb_cliente['nameC']}}</option>
+                            @foreach ($autor as $tb_cliente)
+                            <option value="{{$tb_cliente['idcli']}}">{{$tb_cliente['nameC']}}</option>
                             @endforeach
                             
                         </select>
@@ -45,7 +45,7 @@
                             <select class="form-select" name="departamento" aria-label="Default select example">
                                 <option disabled selected >Seleccione un departamento</option>
 
-                               @foreach ($departamentos as $tb_departamentos)
+                                @foreach ($departamento as $tb_departamentos)
                                     <option value="{{$tb_departamentos['idDepartamento']}}">{{$tb_departamentos['nombre']}}</option>
                                 @endforeach
                                 

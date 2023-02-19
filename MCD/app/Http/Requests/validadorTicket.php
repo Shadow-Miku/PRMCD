@@ -24,7 +24,7 @@ class validadorTicket extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=>'required',
+            
             'departamento'=>'required',
             'clasificacion'=>'required',
             'comentariocliente'=>'required'

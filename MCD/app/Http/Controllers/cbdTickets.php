@@ -33,9 +33,12 @@ class cbdtickets extends Controller
      */
     public function create()
     {
+        $departamento = tb_departamentos::all();
        
+        $autor= tb_cliente::all();
 
-        return view('registroTicket');
+        return view('registroTicket', compact('departamento'),compact('autor'));
+  
     }
 
     /**

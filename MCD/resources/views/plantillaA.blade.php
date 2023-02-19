@@ -40,15 +40,15 @@
                           <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
 
                           <li>
-                            <a href="registroAuxiliar" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Auxiliar de soporte</span> </a>
+                            <a href="{{ route('adminAuxiliar.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Auxiliar de soporte</span> </a>
                           </li>
 
                           <li>
-                            <a href="registroCliente" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Cliente</span> </a>
+                            <a href="{{ route('adminCliente.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Cliente</span> </a>
                           </li>
 
                           <li class="w-100">
-                              <a href="registroDepartamento" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar departamentos</span> </a>
+                              <a href="{{ route('adminDepartamento.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar departamentos</span> </a>
                           </li>
 
                       </ul>
@@ -62,16 +62,16 @@
                           <i i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Administración</span> </a>
                           <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                           <li class="w-100">
-                              <a href="adminAuxiliar" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar auxiliares</span> </a>
+                              <a href="{{ route('adminAuxiliar.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar auxiliares</span> </a>
                           </li>
                             <li>
-                                <a href="adminCliente" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar clientes</span> </a>
+                                <a href="{{ route('adminCliente.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar clientes</span> </a>
                             </li>
                             <li>
-                                <a href="adminDepartamento" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar departamentos</span> </a>
+                                <a href="{{ route('adminDepartamento.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar departamentos</span> </a>
                             </li>
                             <li>
-                                <a href="adminTickets" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar tickets de soporte</span> </a>
+                                <a href="{{ route('adminTickets.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar tickets de soporte</span> </a>
                             </li>
                       </ul>
                   </li>
@@ -85,7 +85,7 @@
                     <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
 
                     <li>
-                      <a href="registroTicket" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Ticket</span> </a>
+                      <a href="{{ route('adminTickets.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Ticket</span> </a>
                     </li>
 
                     <li class="w-100">
