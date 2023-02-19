@@ -35,8 +35,8 @@ class controladorVistas extends Controller
         return view('registroDepartamento');
     }
 
-    public function showlevantarTicket(){
-        return view('levantarTicket');
+    public function showregistroTicket(){
+        return view('registroTicket');
     }
     
     public function showadminAuxiliar(){

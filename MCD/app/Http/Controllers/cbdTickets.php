@@ -19,9 +19,10 @@ class cbdtickets extends Controller
     public function index(Request $request)
     {
         $filtrar = $request->get('filtrar');
-        $consultaTicket = DB::table('tb_tickets')->where('nombre','like','%'.$filtrar.'%')->get();
+        $consultaTicket = DB::table('tb_tickets')->where('autor','like','%'.$filtrar.'%')->get();
+
         $ConsultaT= DB::table('tb_tickets')->get();
-        return view('',compact('ConsultaC','filtrar','consultaComic'));
+        return view('adminTickets',compact('ConsultaT','filtrar','consultaTicket'));
 
     }
 
@@ -32,7 +33,9 @@ class cbdtickets extends Controller
      */
     public function create()
     {
-        //
+       
+
+        return view('registroTicket');
     }
 
     /**
@@ -41,9 +44,17 @@ class cbdtickets extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(validadorTicket $request)
     {
-        //
+        DB::table('tb_tickets')->insert([
+            "nombre"=> $request->input('autor'),
+            "departamento"=> $request->input('departamento'),
+            "clasificacion"=> $request->input('clasificacion'),
+            "comentariocliente"=> $request->input('comentarios_cliente'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now()
+        ]);
+        return redirect('adminTickets')->with('confirmacion','abc');
     }
 
     /**

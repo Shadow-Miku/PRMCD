@@ -85,7 +85,7 @@
                     <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
 
                     <li>
-                      <a href="levantarTicket" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Ticket</span> </a>
+                      <a href="registroTicket" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Ticket</span> </a>
                     </li>
 
                     <li class="w-100">

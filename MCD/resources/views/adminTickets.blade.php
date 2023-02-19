@@ -59,29 +59,29 @@
                     </thead>
 
                     <tbody>
-                   
+                    @foreach($consultaTicket as $consulta)
                         <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td> 
-                            <td></td>
-                            <td></td>          
+                            <th scope="row">{{$consulta->idTicket}}</th>
+                            <td>{{$consulta->autor}}</td>
+                            <td>{{$consulta->departamento}}</td>
+                            <td>{{$consulta->created_at}}</td>
+                            <td>{{$consulta->clasificacion}}</td>
+                            <td>{{$consulta->encargado}}</td>
+                            <td>{{$consulta->estatus}}</td> 
+                            <td>{{$consulta->comentarios_cliente}}</td>
+                            <td>{{$consulta->comentarios_al_cliente}}</td>
+                            <td>{{$consulta->observaciones}}</td>            
                             <td><button class="btn btn-warning" onclick="location.href='#'">
                             <i class="bi bi-person-add"></i> Asignar
                             </button></td>
                             <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
                             <i class="bi bi-chat-square-dots"></i>  Comentar
                             </button></td>
-                            <td></td>
+                          
                       </tr>
                     </tbody> 
-    
-    
-        </table>
+                    @endforeach
+                  </table>
         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
           <i class="bi bi-file-pdf"></i>  Generar Reporte
         </button>

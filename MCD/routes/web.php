@@ -5,6 +5,7 @@ use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\cbdAuxiliares;
 use App\Http\Controllers\cbdDepartamentos;
 use App\Http\Controllers\cbdClientes;
+use App\Http\Controllers\cbdTickets;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,8 +42,8 @@ Route::get('registroDepartamento', function () {
     return view('registroDepartamento');
 });
 
-Route::get('levantarTicket', function () {
-    return view('levantarTicket');
+Route::get('registroTicket', function () {
+    return view('registroTicket');
 });
 
 Route::get('adminAuxiliar', function () {
@@ -53,8 +54,8 @@ Route::get('adminCliente', function () {
     return view('adminCliente');
 });
 
-Route::get('adminTickets', function () {
-    return view('adminTickets');
+Route::get('adminTicket', function () {
+    return view('adminTicket');
 });
 
 Route::get('adminDepartamento', function () {
@@ -140,6 +141,20 @@ Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCl
 /--------------------------------------------------
 */
 
+//index
+Route::get('adminTickets',[cbdTickets::class,'index'])->name('adminTickets.index');
+
+//Create
+Route::get('adminTickets/create', [cbdTickets::class,'create'])->name('adminTickets.create');
+
+//store
+Route::post('adminTickets', [cbdTickets::class,'store'])->name('adminTickets.store');
+
+//Edit
+Route::get('adminTickets/{id}/edit',[cbdTickets::class,'edit'])->name('adminTickets.edit');
+
+//Update
+Route::put('adminTickets/{id}',[cbdTickets::class,'update'])->name('adminTickets.update');
 
 
 

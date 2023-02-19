@@ -22,7 +22,7 @@
 
             <div class="card-body">
 
-                <form class="m-4" method="post" action="">
+                <form class="m-4" method="POST" action="{{route('adminTickets.store')}}">
                     @csrf
                     <!--Errores individuales y guardar los datos escritos-->
 
@@ -30,9 +30,11 @@
                         <label class="form-label">Confirme quien levanta el ticket:</label>
                         <select class="form-select" name="nombre" aria-label="Default select example">
                             <option disabled selected >Seleccione la opcion con su nombre</option>
-                            @foreach ($nombre as $tb_cliente)
+                       
+                            @foreach ($clientes as $tb_cliente)
                                 <option value="{{$tb_cliente['idcli']}}">{{$tb_cliente['nameC']}}</option>
                             @endforeach
+                            
                         </select>
                     <p class="text-primary fst-italic" style="color: aqua"> 
                         {{ $errors->first('nombre') }} </p>
@@ -42,9 +44,11 @@
                         <label for="text" class="form-label">Seleccione el departamento en el que esta: </label>
                             <select class="form-select" name="departamento" aria-label="Default select example">
                                 <option disabled selected >Seleccione un departamento</option>
-                                @foreach ($departamento as $tb_departamentos)
+
+                               @foreach ($departamentos as $tb_departamentos)
                                     <option value="{{$tb_departamentos['idDepartamento']}}">{{$tb_departamentos['nombre']}}</option>
                                 @endforeach
+                                
                             </select>
                         <p class="text-primary fst-italic" style="color: aqua"> 
                             {{ $errors->first('departamento') }} </p>
