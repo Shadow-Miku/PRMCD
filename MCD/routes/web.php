@@ -5,6 +5,7 @@ use App\Http\Controllers\controladorVistas;
 use App\Http\Controllers\cbdAuxiliares;
 use App\Http\Controllers\cbdDepartamentos;
 use App\Http\Controllers\cbdClientes;
+use App\Http\Controllers\cbdTickets;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,10 @@ Route::get('registroDepartamento', function () {
     return view('registroDepartamento');
 });
 
+Route::get('registroTicket', function () {
+    return view('registroTicket');
+});
+
 Route::get('adminAuxiliar', function () {
     return view('adminAuxiliar');
 });
@@ -49,8 +54,8 @@ Route::get('adminCliente', function () {
     return view('adminCliente');
 });
 
-Route::get('adminTickets', function () {
-    return view('adminTickets');
+Route::get('adminTicket', function () {
+    return view('adminTicket');
 });
 
 Route::get('adminDepartamento', function () {
@@ -62,6 +67,7 @@ Route::get('adminDepartamento', function () {
 Route::post('registroCliente', [controladorVistas::class,'procesarregistroCliente'])->name('RegiCliente');
 Route::post('registroAuxiliar', [controladorVistas::class,'procesarregistroAuxiliar'])->name('RegiAuxiliar');
 Route::post('registroDepartamento', [controladorVistas::class,'procesarregistroDepartamento'])->name('RegiDepartamento');
+Route::post('registroTicket', [controladorVistas::class,'procesarlevantarticket'])->name('RegiTicket');
 
 /*
 /--------------------------------------------------
@@ -131,10 +137,24 @@ Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCl
 
 /*
 /--------------------------------------------------
-/Rutas deL CRU TICKETS vista Jefe
+/Rutas deL RU TICKETS vista Jefe
 /--------------------------------------------------
 */
 
+//index
+Route::get('adminTickets',[cbdTickets::class,'index'])->name('adminTickets.index');
+
+//Create
+Route::get('adminTickets/create', [cbdTickets::class,'create'])->name('adminTickets.create');
+
+//store
+Route::post('adminTickets', [cbdTickets::class,'store'])->name('adminTickets.store');
+
+//Edit
+Route::get('adminTickets/{id}/edit',[cbdTickets::class,'edit'])->name('adminTickets.edit');
+
+//Update
+Route::put('adminTickets/{id}',[cbdTickets::class,'update'])->name('adminTickets.update');
 
 
 
@@ -166,3 +186,4 @@ Route::delete('adminCliente/{id}',[cbdClientes::class,'destroy'])->name('adminCl
 | 
 |
 */
+
