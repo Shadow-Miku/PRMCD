@@ -13,8 +13,6 @@ use App\Http\Controllers\cbdTickets;
 |--------------------------------------------------------------------------
 |
 | Aqui se encuentran las rutas del jefe de soporte
-| 
-| 
 |
 */
 
