@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tb_clientes', function (Blueprint $table) {
-            $table->id('idcli');
-            $table->string('nameC')->nullable();
+        Schema::create('tb_auxiliars', function (Blueprint $table) {
+            $table->id('idaux');
+            $table->string('nameA')->nullable();
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_clientes');
+        Schema::dropIfExists('tb_auxiliars');
     }
 };
