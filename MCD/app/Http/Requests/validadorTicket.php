@@ -24,10 +24,10 @@ class validadorTicket extends FormRequest
     public function rules()
     {
         return [
-            
+            'autor'=>'required',
             'departamento'=>'required',
             'clasificacion'=>'required',
-            'comentariocliente'=>'required'
+            'comentarios_cliente'=>'required'
         ];
     }
 }

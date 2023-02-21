@@ -28,7 +28,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">Confirme quien levanta el ticket:</label>
-                        <select class="form-select" name="nombre" aria-label="Default select example">
+                        <select class="form-select" name="autor" aria-label="Default select example">
                             <option disabled selected >Seleccione la opcion con su nombre</option>
                        
                             @foreach ($autor as $tb_cliente)
@@ -37,7 +37,7 @@
                             
                         </select>
                     <p class="text-primary fst-italic" style="color: aqua"> 
-                        {{ $errors->first('nombre') }} </p>
+                        {{ $errors->first('autor') }} </p>
                     </div>
                     
                     <div class="mb-3">
@@ -71,8 +71,8 @@
 
                     <div class="mb-3">
                         <label class="form-label">Comentario:</label>
-                        <input type="text" class="form-control" name="comentariocliente" value="{{old('comentariocliente')}}">
-                        <p class="text-primary fst-italic"> {{ $errors->first('comentariocliente') }} </p>
+                        <input type="text" class="form-control" name="comentarios_cliente" value="{{old('comentarios_cliente')}}">
+                        <p class="text-primary fst-italic"> {{ $errors->first('comentarios_cliente') }} </p>
                     </div>
 
             </div>

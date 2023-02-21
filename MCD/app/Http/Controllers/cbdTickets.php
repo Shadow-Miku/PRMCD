@@ -50,10 +50,10 @@ class cbdtickets extends Controller
     public function store(validadorTicket $request)
     {
         DB::table('tb_tickets')->insert([
-            "nombre"=> $request->input('autor'),
+            "autor"=> $request->input('autor'),
             "departamento"=> $request->input('departamento'),
             "clasificacion"=> $request->input('clasificacion'),
-            "comentariocliente"=> $request->input('comentarios_cliente'),
+            "comentarios_cliente"=> $request->input('comentarios_cliente'),
             "created_at"=> Carbon::now(),
             "updated_at"=> Carbon::now()
         ]);
