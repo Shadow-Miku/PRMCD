@@ -53,8 +53,8 @@
                           <th scope="col">Comentarios del cliente</th>
                           <th scope="col">Comentarios al cliente</th>
                           <th scope="col">Observaciones</th>
-                          <th scope="col">Modificar</th>
-                          <th scope="col">Eliminar</th>
+                          <th scope="col">Asignar</th>
+                          <th scope="col">Comentar</th>
                       </tr>
                     </thead>
 

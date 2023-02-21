@@ -18,11 +18,11 @@ return new class extends Migration
 		    $table->unsignedBigInteger('autor');
 		    $table->unsignedBigInteger('departamento');
 		    $table->string('clasificacion');
-            $table->unsignedBigInteger('encargado');
-		    $table->string('estatus');
+            $table->unsignedBigInteger('encargado')->nullable();
+		    $table->string('estatus')->nullable();
             $table->string('comentarios_cliente');
-            $table->string('comentarios_al_cliente');
-            $table->string('observaciones');
+            $table->string('comentarios_al_cliente')->nullable();
+            $table->string('observaciones')->nullable();
             $table->timestamps();
             $table->foreign('autor')->references('idcli')->on('tb_cliente')->onDelete('cascade');
 		    $table->foreign('departamento')->references('idDepartamento')->on('tb_departamentos')->onDelete('cascade');
@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_ventas');
+        Schema::dropIfExists('tb_tickets');
     }
 };
