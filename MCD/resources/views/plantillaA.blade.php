@@ -96,8 +96,8 @@
             </li>
               <div class="dropdown pb-4">
                   <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="https://avatars.githubusercontent.com/u/108553512?v=4" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                      <span class="d-none d-sm-inline mx-1">Aldo</span>
+                      <img src="https://avatars.githubusercontent.com/u/116704269?s=400&u=7879608ab01b1f3f3f0b5ee6ad38ab0370252548&v=4" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                      <span class="d-none d-sm-inline mx-1">Martin</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                       <!--<li><a class="dropdown-item" href="#">New project...</a></li>-->
