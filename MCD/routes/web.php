@@ -6,6 +6,7 @@ use App\Http\Controllers\cbdAuxiliares;
 use App\Http\Controllers\cbdDepartamentos;
 use App\Http\Controllers\cbdClientes;
 use App\Http\Controllers\cbdTickets;
+use App\Http\Controllers\cbdreporteaux;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +64,11 @@ Route::get('adminTicket', function () {
 Route::get('adminDepartamento', function () {
     return view('adminDepartamento');
 });
+
+Route::get('reporte', function () {
+    return view('reporte');
+});
+
 
 /*Ruta para validador de cliente vista Jefe*/
 
@@ -162,16 +168,20 @@ Route::put('adminTickets/{id}',[cbdTickets::class,'update'])->name('adminTickets
 
 
 /*------------------------------------------------------------------------------------------------------------------------------*/
-/*
-|--------------------------------------------------------------------------
-| Web Routes Auxiliar de soporte
-|--------------------------------------------------------------------------
-|
-| Aqui se encuentran las rutas del auxiliar de soporte
-| 
-| 
-|
-*/
+
+//|--------------------------------------------------------------------------
+//| Web Routes Auxiliar de soporte
+//|--------------------------------------------------------------------------
+//|
+//index
+Route::get('reporte',[cbdreporteaux::class,'index'])->name('reporte.index');
+
+//Create
+Route::get('reporte/create', [cbdreporteaux::class,'create'])->name('reporte.create');
+//| 
+//| 
+//|
+
 
 
 
