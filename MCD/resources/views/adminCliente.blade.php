@@ -47,7 +47,8 @@
                           <th scope="col">Nombre</th>
                           <th scope="col">Email</th>
                           <th scope="col">Usuario</th>
-                          <th scope="col">Modificar</th>
+                          <th scope="col">Contraseña</th>
+                          <th scope="col">Editar</th>
                           <th scope="col">Eliminar</th>
                       </tr>
                     </thead>
@@ -70,9 +71,9 @@
                     </tbody> 
                     @endforeach
           </table>
-          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#">
-            <i class="bi bi-file-pdf"></i>  Generar Reporte
-          </button>
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#" onclick="location.href='/imprimir'">
+          <i class="bi bi-file-pdf"></i>  Generar Reporte
+        </button>
         </div>
     </div>
     

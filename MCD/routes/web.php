@@ -6,6 +6,8 @@ use App\Http\Controllers\cbdAuxiliares;
 use App\Http\Controllers\cbdDepartamentos;
 use App\Http\Controllers\cbdClientes;
 use App\Http\Controllers\cbdTickets;
+use App\Http\Controllers\cbdreportecli;
+use App\Http\Controllers\cbdreportedep;
 use App\Http\Controllers\cbdreporteaux;
 
 /*
@@ -166,20 +168,30 @@ Route::put('adminTickets/{id}',[cbdTickets::class,'update'])->name('adminTickets
 /*------------------------------------------------------------------------------------------------------------------------------*/
 
 //|--------------------------------------------------------------------------
-//| Web Routes Auxiliar de soporte
+//| Web Routes Reportes
 //|--------------------------------------------------------------------------
 //|
 //index
 Route::get('reporte',[cbdreporteaux::class,'index'])->name('reporte.index');
-
-//Create
-Route::get('reporte/create', [cbdreporteaux::class,'create'])->name('reporte.create');
-//| 
+Route::get('reporteclientes',[cbdreportecli::class,'index'])->name('reporteclientes.index');
+Route::get('reportedepa',[cbdreportedep::class,'index'])->name('reportedepa.index');
+//reportedepa| 
 //| 
 //|
 
-
-
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/*
+|--------------------------------------------------------------------------
+| Web Routes Cliente
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/imprimir', [cbdreporteaux::class, 'imprimir']);
+Route::get('/imprimir', [cbdreportecli::class, 'imprimir']);
+Route::get('/imprimir', [cbdreportedep::class, 'imprimir']);
+//| 
+//| 
+//|
 
 
 

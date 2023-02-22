@@ -8,21 +8,20 @@ use Carbon\Carbon;
 Use PDF;
 use Illuminate\Support\Facades\Storage;
 
-class cbdreporteaux extends Controller
+
+class cbdreportecli extends Controller
 {
-   
     public function imprimir(){
-        $ConsultaAux= DB::table('tb_auxiliar')->get();
+        $ConsultaCli= DB::table('tb_cliente')->get();
         
-        $pdf = \PDF::loadView('reporte',compact('ConsultaAux'));
-        return $pdf->download('reporte.pdf');
+        $pdf = \PDF::loadView('reporteclientes',compact('ConsultaCli'));
+        return $pdf->download('reporteclientes.pdf');
    }
-    
 
     public function index()
     {
-        $ConsultaAux= DB::table('tb_auxiliar')->get();
-        return view('reporte',compact('ConsultaAux'));
+        $ConsultaCli= DB::table('tb_cliente')->get();
+        return view('reporteclientes',compact('ConsultaCli'));
     }
 
     /**
