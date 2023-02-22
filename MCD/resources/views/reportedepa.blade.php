@@ -25,32 +25,26 @@
 </style>
 </head>
 <body>
-<h2>Reporte de Auxiliares</h2>
-
+<h2>Reporte de Departamentos</h2>
 <div>
 <table class="table table-borderless table-striped table-hover" >
-            <thead class="table-danger">
-              <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Usuario</th>
-                  <th scope="col">Contraseña</th>
-              </tr>
-            </thead>
+                  <thead class="table-danger">
+                      <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Nombre del Departamento</th>
+                      </tr>
+                    </thead>
 
-            <tbody>
-            @foreach ($ConsultaAux as $consulta)
-                <tr>
-                    <th scope="row">{{$consulta->idaux}}</th>  
-                    <td>{{$consulta->nameA}}</td> 
-                    <td>{{$consulta->emailA}}</td> 
-                    <td>{{$consulta->usernameA}}</td>
-                    <td>{{$consulta->password}}</td> 
-              </tr>
-            </tbody> 
-            @endforeach
-          </table>
+                    <tbody>
+                      @foreach ($ConsultaD as $consulta)
+                        <tr>
+                            <th scope="row">{{$consulta->idDepartamento}}</th>  
+                            <td>{{$consulta->nombre}}</td>  
+                      </tr>
+                    </tbody> 
+                  @endforeach
+    
+        </table>
     </div> 
 </body>
 </html>

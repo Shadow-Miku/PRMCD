@@ -11,6 +11,7 @@ use App\Http\Requests\validadorTicket;
 class controladorVistas extends Controller
 {
     /*Funciones para cada vista de la pagina, solo para visualizar la pagina, las acciones de formulario van en el web.php, aqui van las alertas tambien*/
+    
     public function show(){
         return view('Welcome');
     }

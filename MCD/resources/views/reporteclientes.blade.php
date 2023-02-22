@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,32 +27,32 @@
 </style>
 </head>
 <body>
-<h2>Reporte de Auxiliares</h2>
-
+<h2>Reporte de Clientes</h2>
 <div>
 <table class="table table-borderless table-striped table-hover" >
-            <thead class="table-danger">
-              <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Email</th>
-                  <th scope="col">Usuario</th>
-                  <th scope="col">Contraseña</th>
-              </tr>
-            </thead>
+                  <thead class="table-danger">
+                      <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Usuario</th>
+                          <th scope="col">contraseña</th>
+                      </tr>
+                    </thead>
 
-            <tbody>
-            @foreach ($ConsultaAux as $consulta)
-                <tr>
-                    <th scope="row">{{$consulta->idaux}}</th>  
-                    <td>{{$consulta->nameA}}</td> 
-                    <td>{{$consulta->emailA}}</td> 
-                    <td>{{$consulta->usernameA}}</td>
-                    <td>{{$consulta->password}}</td> 
-              </tr>
-            </tbody> 
-            @endforeach
+                    <tbody>
+                    @foreach ($ConsultaCli as $consulta)
+                        <tr>
+                        <th scope="row">{{$consulta->idcli}}</th>  
+                        <td>{{$consulta->nameC}}</td> 
+                        <td>{{$consulta->emailC}}</td> 
+                        <td>{{$consulta->usernameC}}</td>
+                        <td>{{$consulta->password}}</td>  
+                      </tr>
+                    </tbody> 
+                    @endforeach
           </table>
     </div> 
 </body>
 </html>
+
