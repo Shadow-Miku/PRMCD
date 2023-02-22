@@ -19,6 +19,10 @@ class controladorVistas extends Controller
         return view('principalA');
     } 
 
+    public function showPrincipalB(){
+        return view('principalB');
+    } 
+
     public function showLoginA(){
         return view('LoginA');
     } 
