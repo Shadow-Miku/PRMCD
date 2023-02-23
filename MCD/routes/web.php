@@ -187,8 +187,8 @@ Route::get('reportedepa',[cbdreportedep::class,'index'])->name('reportedepa.inde
 |
 */
 Route::get('/imprimir', [cbdreporteaux::class, 'imprimir']);
-Route::get('/imprimir', [cbdreportecli::class, 'imprimir']);
-Route::get('/imprimir', [cbdreportedep::class, 'imprimir']);
+Route::get('/imprimir2', [cbdreportecli::class, 'imprimir']);
+Route::get('/imprimir3', [cbdreportedep::class, 'imprimir']);
 //| 
 //| 
 //|
