@@ -11,12 +11,17 @@ use App\Http\Requests\validadorTicket;
 class controladorVistas extends Controller
 {
     /*Funciones para cada vista de la pagina, solo para visualizar la pagina, las acciones de formulario van en el web.php, aqui van las alertas tambien*/
+    
     public function show(){
         return view('Welcome');
     }
 
     public function showPrincipal(){
         return view('principalA');
+    } 
+
+    public function showPrincipalB(){
+        return view('principalB');
     } 
 
     public function showLoginA(){
@@ -55,6 +60,9 @@ class controladorVistas extends Controller
         return view('adminDepartamento');
     }
 
+    public function showreporte(){
+        return view('reporte');
+    }
     /*Rutas POST para envio de datos en formulario en Sitio Jefe de soporte*/
     public function procesarregistroCliente(validadorCliente $req){
         return redirect('registroCliente')->with('confirmacion','Registro de Cliente exitoso.');

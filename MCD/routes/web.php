@@ -6,6 +6,9 @@ use App\Http\Controllers\cbdAuxiliares;
 use App\Http\Controllers\cbdDepartamentos;
 use App\Http\Controllers\cbdClientes;
 use App\Http\Controllers\cbdTickets;
+use App\Http\Controllers\cbdreportecli;
+use App\Http\Controllers\cbdreportedep;
+use App\Http\Controllers\cbdreporteaux;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +31,13 @@ Route::get('principalA', function () {
     return view('principalA');
 });
 
+Route::get('principalB', function () {
+    return view('principalB');
+});
+
 Route::get('registroAuxiliar', function () {
     return view('registroAuxiliar');
-});
+}); 
 
 Route::get('registroCliente', function () {
     return view('registroCliente');
@@ -59,6 +66,11 @@ Route::get('adminTicket', function () {
 Route::get('adminDepartamento', function () {
     return view('adminDepartamento');
 });
+
+Route::get('reporte', function () {
+    return view('reporte');
+});
+
 
 /*Ruta para validador de cliente vista Jefe*/
 
@@ -158,18 +170,32 @@ Route::put('adminTickets/{id}',[cbdTickets::class,'update'])->name('adminTickets
 
 
 /*------------------------------------------------------------------------------------------------------------------------------*/
+
+//|--------------------------------------------------------------------------
+//| Web Routes Reportes
+//|--------------------------------------------------------------------------
+//|
+//index
+Route::get('reporte',[cbdreporteaux::class,'index'])->name('reporte.index');
+Route::get('reporteclientes',[cbdreportecli::class,'index'])->name('reporteclientes.index');
+Route::get('reportedepa',[cbdreportedep::class,'index'])->name('reportedepa.index');
+//reportedepa| 
+//| 
+//|
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
 /*
 |--------------------------------------------------------------------------
-| Web Routes Auxiliar de soporte
+| Web Routes Cliente
 |--------------------------------------------------------------------------
 |
-| Aqui se encuentran las rutas del auxiliar de soporte
-| 
-| 
-|
 */
-
-
+Route::get('/imprimir', [cbdreporteaux::class, 'imprimir']);
+Route::get('/imprimir', [cbdreportecli::class, 'imprimir']);
+Route::get('/imprimir', [cbdreportedep::class, 'imprimir']);
+//| 
+//| 
+//|
 
 
 

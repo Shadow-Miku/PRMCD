@@ -22,82 +22,46 @@
           <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
             <!--enlace /-->
               <a href="" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                  <span class="fs-5 d-none d-sm-inline">Jefe de soporte</span>
+                  <span class="fs-5 d-none d-sm-inline">Auxiliar de soporte</span>
               </a>
               <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                 <!--enlace menu-->
                   <li class="nav-item">
 
-                      <a href="principalA" class="nav-link align-middle px-0"> 
+                      <a href="" class="nav-link align-middle px-0"> 
 
                           <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Menu</span>
                       </a>
                   </li>
-                  <!--enlace submenu de registrar-->
-                  <li>
-                      <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                          <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Registrar</span> </a>
-                          <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-
-                          <li>
-                            <a href="{{ route('adminAuxiliar.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Auxiliar de soporte</span> </a>
-                          </li>
-
-                          <li>
-                            <a href="{{ route('adminCliente.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Cliente</span> </a>
-                          </li>
-
-                          <li class="w-100">
-                              <a href="{{ route('adminDepartamento.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar departamentos</span> </a>
-                          </li>
-
-                      </ul>
-                  </li>
-
-        
-                 
+              
+              
                   <!--enlace submenu de consultas-->
                   <li>
                       <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                          <i i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Administración</span> </a>
+                          <i i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Control de tickets</span> </a>
                           <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                           <li class="w-100">
-                              <a href="{{ route('adminAuxiliar.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar auxiliares</span> </a>
+                              <a href=" " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Atencion al Ticket </span> </a>
                           </li>
                             <li>
-                                <a href="{{ route('adminCliente.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar clientes</span> </a>
+                                <a href=" " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Cambios de Estatus</span> </a>
                             </li>
                             <li>
-                                <a href="{{ route('adminDepartamento.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar departamentos</span> </a>
+                                <a href=" " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Comuniacion de Tickets</span> </a>
                             </li>
                             <li>
-                                <a href="{{ route('adminTickets.index') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Administrar tickets de soporte</span> </a>
+                                <a href=" " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Detalle de Seguimiento</span> </a>
                             </li>
                       </ul>
                   </li>
               </ul>
               <hr>
 
-              <!--enlace testeo tickets-->
-              <li>
-                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                    <i class="bi bi-fullscreen"></i> <span class="ms-1 d-none d-sm-inline">Testeo tickets</span> </a>
-                    <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-
-                    <li>
-                      <a href="{{ route('adminTickets.create') }} " class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Registrar Ticket</span> </a>
-                    </li>
-
-                    <li class="w-100">
-                      <a href="adminDepartamento" class="nav-link px-0"> <span class="d-none d-sm-inline">&nbsp; &nbsp; Vista ticket auxiliar</span> </a>
-                    </li>
-
-                </ul>
             </li>
               <div class="dropdown pb-4">
                   <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src="https://avatars.githubusercontent.com/u/116704269?s=400&u=7879608ab01b1f3f3f0b5ee6ad38ab0370252548&v=4" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                      <span class="d-none d-sm-inline mx-1">Martin</span>
+                      <img src="https://img.freepik.com/vector-premium/icono-perfil-avatar_188544-4755.jpg?w=2000" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                      <span class="d-none d-sm-inline mx-1">Auxiliar</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                       <!--<li><a class="dropdown-item" href="#">New project...</a></li>-->
