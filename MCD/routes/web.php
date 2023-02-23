@@ -31,9 +31,13 @@ Route::get('principalA', function () {
     return view('principalA');
 });
 
+Route::get('principalB', function () {
+    return view('principalB');
+});
+
 Route::get('registroAuxiliar', function () {
     return view('registroAuxiliar');
-});
+}); 
 
 Route::get('registroCliente', function () {
     return view('registroCliente');
