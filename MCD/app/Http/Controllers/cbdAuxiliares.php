@@ -14,10 +14,12 @@ class cbdauxiliares extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $ConsultaAux= DB::table('tb_auxiliar')->get();
-        return view('adminAuxiliar',compact('ConsultaAux'));
+        $filtrar = $request->get('filtrar');
+        $consultaAux = DB::table('tb_auxiliar')->where('nameA','like','%'.$filtrar.'%')->get();
+        $ConsultaA= DB::table('tb_auxiliar')->get();
+        return view('adminAuxiliar',compact('consultaAux','ConsultaA','filtrar'));
     }
 
     /**

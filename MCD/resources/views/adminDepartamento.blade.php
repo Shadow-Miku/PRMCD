@@ -51,7 +51,7 @@
                     </thead>
 
                     <tbody>
-                      @foreach ($ConsultaD as $consulta)
+                      @foreach ($consultaDep as $consulta)
                         <tr>
                             <th scope="row">{{$consulta->idDepartamento}}</th>  
                             <td>{{$consulta->nombre}}</td>         
