@@ -69,7 +69,7 @@ class cbdtickets extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -80,7 +80,11 @@ class cbdtickets extends Controller
      */
     public function edit($id)
     {
-        //
+        $departamento = tb_departamentos::all();
+        $autor= tb_cliente::all();
+        $auxil = tb_auxiliar::all();
+        $consultaId= DB::table('tb_tickets')->where('idTicket',$id)->first();
+        return view('actTicket', compact('consultaId','auxil','autor','departamento'));
     }
 
     /**
@@ -90,9 +94,16 @@ class cbdtickets extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validadorTicket $request, $id)
     {
-        //
+        DB::table('tb_tickets')->where('idTicket', $id)->update([
+            "encargado"=> $request->input('encargado'),
+            "comentarios_al_cliente"=> $request->input('comentarios_al_cliente'),
+            "observaciones"=> $request->input('observaciones'),
+            "updated_at"=> Carbon::now()
+        ]);
+
+        return redirect('adminTickets')->with('actualizar','abc');
     }
 
     /**

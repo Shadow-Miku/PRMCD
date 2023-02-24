@@ -71,7 +71,7 @@
                             <td>{{$consulta->comentarios_cliente}}</td>
                             <td>{{$consulta->comentarios_al_cliente}}</td>
                             <td>{{$consulta->observaciones}}</td>            
-                            <td><button class="btn btn-warning" onclick="location.href='#'">
+                            <td><button class="btn btn-warning" onclick="location.href='{{route('adminTickets.edit', $consulta->idTicket)}}'">
                             <i class="bi bi-person-add"></i> Asignar
                             </button></td>
                             <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
