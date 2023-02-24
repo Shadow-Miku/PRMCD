@@ -53,13 +53,12 @@
                           <th scope="col">Comentarios del cliente</th>
                           <th scope="col">Comentarios al cliente</th>
                           <th scope="col">Observaciones</th>
-                          <th scope="col">Asignar</th>
-                          <th scope="col">Comentar</th>
+                          <th scope="col">Asignación y comentarios</th>
                       </tr>
                     </thead>
 
                     <tbody>
-                    @foreach($consultaTicket as $consulta)
+                    @foreach($tickets as $consulta)
                         <tr>
                             <th scope="row">{{$consulta->idTicket}}</th>
                             <td>{{$consulta->autor}}</td>
@@ -73,11 +72,7 @@
                             <td>{{$consulta->observaciones}}</td>            
                             <td><button class="btn btn-warning" onclick="location.href='{{route('adminTickets.edit', $consulta->idTicket)}}'">
                             <i class="bi bi-person-add"></i> Asignar
-                            </button></td>
-                            <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
-                            <i class="bi bi-chat-square-dots"></i>  Comentar
-                            </button></td>
-                          
+                            </button></td>                 
                       </tr>
                     </tbody> 
                     @endforeach
