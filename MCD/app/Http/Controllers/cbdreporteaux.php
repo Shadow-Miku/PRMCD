@@ -15,7 +15,7 @@ class cbdreporteaux extends Controller
         $ConsultaAux= DB::table('tb_auxiliar')->get();
         
         $pdf = \PDF::loadView('reporte',compact('ConsultaAux'));
-        return $pdf->download('reporte.pdf');
+        return $pdf->stream('reporte.pdf');
    }
     
 

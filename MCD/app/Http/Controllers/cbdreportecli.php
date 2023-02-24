@@ -15,7 +15,7 @@ class cbdreportecli extends Controller
         $ConsultaCli= DB::table('tb_cliente')->get();
         
         $pdf = \PDF::loadView('reporteclientes',compact('ConsultaCli'));
-        return $pdf->download('reporteclientes.pdf');
+        return $pdf->stream('reporteclientes.pdf');
    }
 
     public function index()
