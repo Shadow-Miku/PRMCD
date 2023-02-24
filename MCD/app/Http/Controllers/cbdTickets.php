@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\validadorTicket;
+use App\Models\tb_auxiliar;
 use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
@@ -34,10 +35,10 @@ class cbdtickets extends Controller
     public function create()
     {
         $departamento = tb_departamentos::all();
-       
+        $auxil = tb_auxiliar::all();
         $autor= tb_cliente::all();
 
-        return view('registroTicket', compact('departamento'),compact('autor'));
+        return view('registroTicket', compact('departamento'),compact('autor'),compact('auxil'));
   
     }
 
