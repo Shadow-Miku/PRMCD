@@ -24,6 +24,7 @@ class validadorDepartamento extends FormRequest
     public function rules()
     {
         return [
+            
             'nombre'=>'required',
            
         ];

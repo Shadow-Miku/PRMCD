@@ -63,6 +63,7 @@ class controladorVistas extends Controller
     public function showreporte(){
         return view('reporte');
     }
+    
     /*Rutas POST para envio de datos en formulario en Sitio Jefe de soporte*/
     public function procesarregistroCliente(validadorCliente $req){
         return redirect('registroCliente')->with('confirmacion','Registro de Cliente exitoso.');

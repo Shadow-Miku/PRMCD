@@ -30,7 +30,7 @@
     <h1 class="display-1 mt-4 mb-4 text-center"> Tickets registrados </h1>
 
       <form action="">
-          <input type="search" placeholder="Buscar un ticket..." name="filtrarC" class="form-control">
+          <input type="search" placeholder="Buscar un ticket..." name="filtrar" class="form-control">
             <button type="submit" class="btn btn-primary">
               <i class="bi bi-pen"></i> Buscar ticket </button>
       </form>
@@ -53,13 +53,12 @@
                           <th scope="col">Comentarios del cliente</th>
                           <th scope="col">Comentarios al cliente</th>
                           <th scope="col">Observaciones</th>
-                          <th scope="col">Asignar</th>
-                          <th scope="col">Comentar</th>
+                          <th scope="col">Asignación y comentarios</th>
                       </tr>
                     </thead>
 
                     <tbody>
-                    @foreach($consultaTicket as $consulta)
+                    @foreach($tickets as $consulta)
                         <tr>
                             <th scope="row">{{$consulta->idTicket}}</th>
                             <td>{{$consulta->autor}}</td>
@@ -71,13 +70,9 @@
                             <td>{{$consulta->comentarios_cliente}}</td>
                             <td>{{$consulta->comentarios_al_cliente}}</td>
                             <td>{{$consulta->observaciones}}</td>            
-                            <td><button class="btn btn-warning" onclick="location.href='#'">
+                            <td><button class="btn btn-warning" onclick="location.href='{{route('adminTickets.edit', $consulta->idTicket)}}'">
                             <i class="bi bi-person-add"></i> Asignar
-                            </button></td>
-                            <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#">
-                            <i class="bi bi-chat-square-dots"></i>  Comentar
-                            </button></td>
-                          
+                            </button></td>                 
                       </tr>
                     </tbody> 
                     @endforeach

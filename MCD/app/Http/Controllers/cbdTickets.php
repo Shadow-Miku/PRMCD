@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\validadorTicket;
+use App\Models\tb_auxiliar;
 use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
@@ -20,9 +21,16 @@ class cbdtickets extends Controller
     {
         $filtrar = $request->get('filtrar');
         $consultaTicket = DB::table('tb_tickets')->where('autor','like','%'.$filtrar.'%')->get();
-
         $ConsultaT= DB::table('tb_tickets')->get();
-        return view('adminTickets',compact('ConsultaT','filtrar','consultaTicket'));
+
+        $tickets = DB::table('tb_tickets')
+                ->join('tb_cliente', 'tb_tickets.autor', '=', 'tb_cliente.idcli')
+                ->join('tb_departamentos', 'tb_tickets.departamento', '=', 'tb_departamentos.idDepartamento')
+                ->join('tb_auxiliar', 'tb_tickets.encargado', '=', 'tb_auxiliar.idaux')
+                ->select('tb_tickets.idTicket', 'tb_cliente.nameC AS autor', 'tb_departamentos.nombre AS departamento', 'tb_tickets.created_at', 'tb_tickets.clasificacion', 'tb_auxiliar.nameA AS encargado', 'tb_tickets.estatus', 'tb_tickets.comentarios_cliente', 'tb_tickets.comentarios_al_cliente', 'tb_tickets.observaciones')
+                ->get();
+
+        return view('adminTickets',compact('ConsultaT','filtrar','consultaTicket','tickets'));
 
     }
 
@@ -34,10 +42,10 @@ class cbdtickets extends Controller
     public function create()
     {
         $departamento = tb_departamentos::all();
-       
+        $auxil = tb_auxiliar::all();
         $autor= tb_cliente::all();
 
-        return view('registroTicket', compact('departamento'),compact('autor'));
+        return view('registroTicket', compact('departamento'),compact('autor'),compact('auxil'));
   
     }
 
@@ -68,7 +76,7 @@ class cbdtickets extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -79,7 +87,11 @@ class cbdtickets extends Controller
      */
     public function edit($id)
     {
-        //
+        $departamento = tb_departamentos::all();
+        $autor= tb_cliente::all();
+        $auxil = tb_auxiliar::all();
+        $consultaId= DB::table('tb_tickets')->where('idTicket',$id)->first();
+        return view('actTicket', compact('consultaId','auxil','autor','departamento'));
     }
 
     /**
@@ -89,9 +101,16 @@ class cbdtickets extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validadorTicket $request, $id)
     {
-        //
+        DB::table('tb_tickets')->where('idTicket', $id)->update([
+            "encargado"=> $request->input('encargado'),
+            "comentarios_al_cliente"=> $request->input('comentarios_al_cliente'),
+            "observaciones"=> $request->input('observaciones'),
+            "updated_at"=> Carbon::now()
+        ]);
+
+        return redirect('adminTickets')->with('actualizar','abc');
     }
 
     /**

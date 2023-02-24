@@ -30,7 +30,7 @@
     <h1 class="display-1 mt-4 mb-4 text-center"> Auxiliares registrados </h1>
 
       <form action="#">
-          <input type="search" placeholder="Buscar un auxiliar..." name="filtrarC" class="form-control">
+          <input type="search" placeholder="Buscar un auxiliar..." name="filtrar" class="form-control">
             <button type="submit" class="btn btn-primary">
               <i class="bi bi-pen"></i> Buscar Auxiliar </button>
       </form>
@@ -53,7 +53,7 @@
             </thead>
 
             <tbody>
-            @foreach ($ConsultaAux as $consulta)
+            @foreach ($consultaAux as $consulta)
                 <tr>
                     <th scope="row">{{$consulta->idaux}}</th>  
                     <td>{{$consulta->nameA}}</td> 

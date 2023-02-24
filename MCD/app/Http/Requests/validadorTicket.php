@@ -27,7 +27,10 @@ class validadorTicket extends FormRequest
             'autor'=>'required',
             'departamento'=>'required',
             'clasificacion'=>'required',
-            'comentarios_cliente'=>'required'
+            'comentarios_cliente'=>'required',
+            'encargado'=>'required',
+            'comentarios_al_cliente'=>'required',
+            'observaciones'=>'required'
         ];
     }
 }
