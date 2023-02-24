@@ -21,9 +21,16 @@ class cbdtickets extends Controller
     {
         $filtrar = $request->get('filtrar');
         $consultaTicket = DB::table('tb_tickets')->where('autor','like','%'.$filtrar.'%')->get();
-
         $ConsultaT= DB::table('tb_tickets')->get();
-        return view('adminTickets',compact('ConsultaT','filtrar','consultaTicket'));
+
+        $tickets = DB::table('tb_tickets')
+                ->join('tb_cliente', 'tb_tickets.autor', '=', 'tb_cliente.idcli')
+                ->join('tb_departamentos', 'tb_tickets.departamento', '=', 'tb_departamentos.idDepartamento')
+                ->join('tb_auxiliar', 'tb_tickets.encargado', '=', 'tb_auxiliar.idaux')
+                ->select('tb_tickets.idTicket', 'tb_cliente.nameC AS autor', 'tb_departamentos.nombre AS departamento', 'tb_tickets.created_at', 'tb_tickets.clasificacion', 'tb_auxiliar.nameA AS encargado', 'tb_tickets.estatus', 'tb_tickets.comentarios_cliente', 'tb_tickets.comentarios_al_cliente', 'tb_tickets.observaciones')
+                ->get();
+
+        return view('adminTickets',compact('ConsultaT','filtrar','consultaTicket','tickets'));
 
     }
 
