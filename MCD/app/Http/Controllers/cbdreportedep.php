@@ -14,7 +14,7 @@ class cbdreportedep extends Controller
         $ConsultaD= DB::table('tb_departamentos')->get();
         
         $pdf = \PDF::loadView('reportedepa',compact('ConsultaD'));
-        return $pdf->download('reporteDepartamentos.pdf');
+        return $pdf->stream('reporteDepartamentos.pdf');
    }
 
     public function index()

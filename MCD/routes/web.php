@@ -9,6 +9,7 @@ use App\Http\Controllers\cbdTickets;
 use App\Http\Controllers\cbdreportecli;
 use App\Http\Controllers\cbdreportedep;
 use App\Http\Controllers\cbdreporteaux;
+use App\Http\Controllers\cbdreportetic;
 
 /*
 |--------------------------------------------------------------------------
@@ -193,6 +194,7 @@ Route::get('reportedepa',[cbdreportedep::class,'index'])->name('reportedepa.inde
 Route::get('/imprimir', [cbdreporteaux::class, 'imprimir']);
 Route::get('/imprimir2', [cbdreportecli::class, 'imprimir']);
 Route::get('/imprimir3', [cbdreportedep::class, 'imprimir']);
+Route::get('/imprimir4', [cbdreportetic::class, 'imprimir']);
 //| 
 //| 
 //|
