@@ -19,10 +19,10 @@ return new class extends Migration
 		    $table->unsignedBigInteger('departamento');
 		    $table->string('clasificacion');
             $table->unsignedBigInteger('encargado')->nullable();
-		    $table->string('estatus')->default('Pendiente')->nullable();
+		    $table->string('estatus')->default('Pendiente');
             $table->string('comentarios_cliente');
-            $table->string('comentarios_al_cliente')->default('Sin comentarios')->nullable();
-            $table->string('observaciones')->default('Sin observaciones')->nullable();
+            $table->string('comentarios_al_cliente')->default('Sin comentarios');
+            $table->string('observaciones')->default('Sin observaciones');
             $table->timestamps();
             $table->foreign('autor')->references('idcli')->on('tb_cliente')->onDelete('cascade');
 		    $table->foreign('departamento')->references('idDepartamento')->on('tb_departamentos')->onDelete('cascade');
